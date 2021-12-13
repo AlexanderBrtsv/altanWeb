@@ -1,33 +1,38 @@
-<!-- Теги -->
-
-<!-- Заголовок 1 уровня -->
-<h1>
-    Hello Flask!
-</h1>
-
-<div>
-    <h2>структурный тег div</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facilis nisi minima rem numquam sapiente sunt iure dolores molestias expedita. Accusamus, rerum rem? Dolorem nulla in animi quia soluta molestiae!</p>
-</div>
-<div>
-    <h2>структурный тег div</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facilis nisi minima rem numquam sapiente sunt iure dolores molestias expedita. Accusamus, rerum rem? Dolorem nulla in animi quia soluta molestiae!</p>
-</div>
-<span>строчный элемент 1</span>
-<span>строчный элемент 2</span>
-
-<a href="http://google.com" style="color: red;">ссылка</a>
-<img src="../static/logo_1.jpg" alt="Лого Реал Мадрид">
-
-<div>
-    <a href="http://google.com">
-        <img src="../static/logo_1.jpg" alt="Лого Реал Мадрид">
-    </a>
-</div>
-
-<div>
-    <h3 style="background-color: sienna; border: slateblue solid 3px;">Заголовок</h3>
-    <p style="border: tomato dashed 3px; width: 50%; height: 100px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor.
-    </p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            header
+        </header>
+        <div class="sidebar_1">
+            sidebar_1
+        </div>
+        <div class="main">
+            main
+            <div class="content" id="c1">
+                Content 1
+            </div>
+            <div class="content" id="c2">
+                Content 2
+            </div>
+            <div class="content" id="c3">
+                Content 3
+            </div>
+        </div>
+        <div class="sidebar_2">
+            sidebar_2
+        </div>
+        <footer class="footer">
+            footer
+        </footer>    
+    </div>
+</body>
+</html>
