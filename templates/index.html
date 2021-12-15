@@ -10,13 +10,20 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            header
+            <div class="logo">
+                MyLogo
+            </div>
+            <ul class="navbar">
+                <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                <li><a href="{{ url_for('product_page') }}">Product</a></li>
+                <li><a href="{{ url_for('home_page') }}">Contact</a></li>
+            </ul>
         </header>
         <div class="sidebar_1">
             sidebar_1
         </div>
         <div class="main">
-            main
+            <!-- main
             <div class="content" id="c1">
                 Content 1
             </div>
@@ -25,7 +32,9 @@
             </div>
             <div class="content" id="c3">
                 Content 3
-            </div>
+            </div> -->
+            {% block main %}
+            {% endblock %}
         </div>
         <div class="sidebar_2">
             sidebar_2

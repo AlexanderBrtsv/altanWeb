@@ -1,3 +1,5 @@
+/* Импорт шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 /* Селекторы и свойства */
 /* универсальный селектор */
 * {
@@ -14,6 +16,7 @@ div {
 /* селектор класса */
 .wrapper {
     border: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* селектор по идентификатору */
@@ -58,7 +61,32 @@ body {
 
 .header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
+.navbar {
+    border: solid 2px rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+/* скомбинированный селектор дочерних элементов  */
+.navbar>li {
+    /* border: solid 1px red; */  
+}
+/* Селектор потомков */
+.navbar a{
+    text-decoration: none;
+    color: springgreen;
+    font-size: x-large;
+}
+/* Псевдокласс наведения курсора */
+.navbar a:hover{
+    color: rgb(255, 81, 0);
+}
+
 .sidebar_1 {
     grid-area: sidebar_1;
 }
