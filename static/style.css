@@ -127,6 +127,36 @@ header, footer {
     grid-area: main;
     grid-column: 2 / 5;
 }
+.product-main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 20px 50% 10px 1fr;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.product-main div {
+    border: none;
+}
+.product-main h1 {
+    grid-row: 2 / 3;
+}
+.product-main form{
+    grid-row: 3 / 4;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 20px 0;
+}
+.field label {
+    margin-right: 10px;
+}
+.message {
+    grid-row: 4 / 5;
+}
+
 /* .sidebar_2 {
     grid-area: sidebar_2;
 } */

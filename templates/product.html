@@ -6,5 +6,35 @@
 
 <div class="product-main">
     <h1>Product page</h1>
+
+    <form method="post">
+        <!-- Поля ввода данных -->
+        <!-- Поле имени -->
+        <div class="field">
+            <label for="name">
+                Имя
+            </label>
+            <input type="text" name="name" id="name">
+        </div>
+        <!-- Поля пароля -->
+        <div class="field">
+            <label for="pwd">
+                Пароль
+            </label>
+            <input type="password" name="pwd" id="pwd">
+        </div>
+        <!-- Кнопка -->
+        <button type="submit">
+            Готово
+        </button>
+    </form>
+
+    <div class="message">
+        {% if msg %}
+        <h3>{{ msg }}</h3>
+        <p>Name: {{ name }}</p>
+        <p>password: {{ password}}</p>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
