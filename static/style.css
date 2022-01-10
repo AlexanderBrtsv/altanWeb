@@ -92,7 +92,7 @@ header, footer {
     /* border: solid 2px rebeccapurple; */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
     list-style-type: none;
 }
@@ -100,10 +100,11 @@ header, footer {
 .navbar>li {
     /* border: solid 1px red; */
     display: block;  
-    margin: 0 20px;
+    margin-left: 20px;
 }
 /* Селектор потомков */
 .navbar a{
+    margin-right: 20px;
     text-decoration: none;
     color: springgreen;
     font-size: x-large;
@@ -118,6 +119,10 @@ header, footer {
 .navbar li::after {
     content: "|";
     color: darkblue;
+}
+/* Псевдоэлемент псевдокласса */
+.navbar li:last-child::after {
+    content: none;
 }
 
 /* .sidebar_1 {

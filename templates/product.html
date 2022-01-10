@@ -5,16 +5,16 @@
 {% block main %}
 
 <div class="product-main">
-    <h1>Product page</h1>
+    <h1>Password generator</h1>
 
     <form method="post">
         <!-- Поля ввода данных -->
-        <!-- Поле имени -->
+        <!-- Поле соли -->
         <div class="field">
-            <label for="name">
-                Имя
+            <label for="salt">
+                Соль
             </label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="salt" id="salt">
         </div>
         <!-- Поля пароля -->
         <div class="field">
@@ -22,6 +22,13 @@
                 Пароль
             </label>
             <input type="password" name="pwd" id="pwd">
+        </div>
+        <!-- Поле ввода количества символов -->
+        <div class="field">
+            <label for="num_char">
+                Количество символов
+            </label>
+            <input type="text" name="num_char" id="num_char" value="-">
         </div>
         <!-- Кнопка -->
         <button type="submit">
@@ -32,8 +39,8 @@
     <div class="message">
         {% if msg %}
         <h3>{{ msg }}</h3>
-        <p>Name: {{ name }}</p>
-        <p>password: {{ password}}</p>
+        <!-- <p>Name: {{ name }}</p> -->
+        <!-- <p>password: {{ password}}</p> -->
         {% endif %}
     </div>
 </div>
