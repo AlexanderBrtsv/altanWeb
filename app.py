@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from pwdgenerator import hashing
+import db
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ def home_page():
 
 @app.route("/product", methods=["GET", "POST"])
 def product_page():
-    msg = None
+    msg = ""
     # name = ""
     # pwd = ""
     if request.method == "POST":
@@ -21,14 +22,27 @@ def product_page():
         num_char = request.form.get("num_char")
 
         # msg = f"{name}, {pwd}"
-        if (salt != None) and (pwd != None):
-            msg = hashing(pwd, salt, num_char)
+        # if (salt != None) and (pwd != None):
+        msg = hashing(pwd, salt, num_char)
+
+        # print(request.form)
+        form_data = salt + pwd + num_char
+
+        db.write_db(form_data, msg)
 
     return render_template(
         "product.html", 
         msg = msg,
         # name = name,
         # password = pwd
+    )
+
+@app.route("/logs")
+def logs_page():
+    data = db.read_db()
+    print(data)
+    return render_template(
+        "logs.html", data = data
     )
 
 # http://127.0.0.1:5000/test?v1=Hello&v2=Hi
@@ -43,4 +57,5 @@ def test_page():
     """
 
 if __name__== "__main__":
+    db.create_db()
     app.run(debug=True)
